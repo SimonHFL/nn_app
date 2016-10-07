@@ -1,0 +1,27 @@
+Starting docker:
+
+	docker-machine start default
+	eval "$(docker-machine env default)"
+
+building image
+	docker build -rm -t test docker
+
+run image
+	docker run -it --rm -v "$PWD" -w /test/ test bash
+
+run image
+	docker run -it --rm -v "$PWD" -w /test test bash 
+
+delete image
+	docker rmi <name>
+
+connect to running image
+	docker exec -it test /bin/bash
+
+
+### to run python 3: python3
+
+
+
+# docker compose guide
+#https://docs.docker.com/compose/gettingstarted/
