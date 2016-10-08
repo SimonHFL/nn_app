@@ -8,5 +8,7 @@ services:
      - .:/code
     depends_on:
      - neuralnetwork
+    tty: true
   neuralnetwork:
     image: neural_network
+    tty: true

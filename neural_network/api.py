@@ -19,6 +19,10 @@ class Api:
 		network.train(labeledExamples, maxIterations=5000)
 		self.save_network(network)
 
+	def evaluate(self, example):
+		network = self.load_network()
+		return network.evaluate(example)
+
 	def create(self):
 		self.network = makeNetwork(3, 1, 3)
 		self.save_network(self.network)
